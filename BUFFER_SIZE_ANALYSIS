@@ -1,0 +1,37 @@
+Patrick Murray
+CS 631 - APUE
+Professor Schaumann
+September 21, 2015
+
+"I pledge my honor that I have abided by the Stevens Honor System."
+
+                              Homework 2
+
+                       Buffer-Runtime Analysis
+
+  $ make
+  $ ./tcp ~/Downloads/linuxmint.iso test/directory/output.iso
+
+
+  filename        size        sha1sum
+  --------------------------------------------------------------------
+  linuxmint.iso   1.6 GB      59091061d3fb380a13938425274ff0399348a526
+  output.iso      1.6 GB      59091061d3fb380a13938425274ff0399348a526
+
+                                Data
+
+    buffer size     real            user            sys
+    ---------------------------------------------------------
+       16           1m48.007s       0m4.440s        1m43.640s
+       32           0m56.171s       0m2.180s        0m52.196s
+       64           0m28.123s       0m1.108s        0m26.496s
+      128           0m14.580s       0m0.500s        0m13.764s
+      256            0m7.720s       0m0.336s         0m7.236s
+      512            0m4.454s       0m0.136s         0m4.052s
+     1024            0m3.421s       0m0.068s         0m2.424s
+     2048            0m2.382s       0m0.020s         0m1.648s
+ >>  4096            0m1.695s       0m0.028s         0m1.224s << optimal
+     8192            0m1.490s       0m0.008s         0m1.112s
+    16384            0m1.536s       0m0.012s         0m1.076s
+    32768            0m1.942s       0m0.000s         0m1.188s
+    65536            0m0.862s       0m0.008s         0m0.852s
